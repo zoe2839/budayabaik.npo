@@ -1,1 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudayaBaik - Creating Positive Change in Indonesia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #F9F6F0;
+            --beige: #E8E1D5;
+            --light-green: #D8E2DC;
+            --medium-green: #A4C3B2;
+            --dark-green: #6B9080;
+            --white: #FFFFFF;
+            --text-color: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            background-color: var(--cream);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--dark-green);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--dark-green);
+            font-weight: 600;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--dark-green);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .impact-numbers {
+            display: flex;
+            justify-content: center;
+            margin: 3rem 0;
+        }
+        
+        .number {
+            margin: 0 2rem;
+            padding: 1.5rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .number h2 {
+            font-size: 3rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+        
+        .number p {
+            margin-bottom: 0;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--medium-green);
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--white);
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .vision-mission {
+            display: flex;
+            gap: 30px;
+            margin-top: 2rem;
+        }
+        
+        .vision, .mission {
+            flex: 1;
+            background-color: var(--light-green);
+            padding: 25px;
+            border-radius: 10px;
+        }
+        
+        /* Team Section */
+        .team {
+            background-color: var(--beige);
+        }
+        
+        .team-members {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .team-member {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+        
+        .member-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .member-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .team-member:hover .member-img img {
+            transform: scale(1.1);
+        }
+        
+        .member-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .member-info h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .member-role {
+            color: var(--dark-green);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        
+        /* Projects Section */
+        .projects {
+            background-color: var(--white);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .project-card {
+            background-color: var(--cream);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .project-info {
+            padding: 20px;
+        }
+        
+        .project-info h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Impact Section */
+        .impact {
+            background-color: var(--light-green);
+        }
+        
+        .impact-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .impact-map {
+            width: 100%;
+            max-width: 800px;
+            margin: 2rem auto;
+            position: relative;
+        }
+        
+        .map-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .map-marker {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: var(--dark-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transform: translate(-50%, -50%);
+        }
+        
+        .map-marker::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: var(--dark-green);
+            opacity: 0.5;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--white);
+        }
+        
+        .contact-content {
+            display: flex;
+            gap: 40px;
+        }
+        
+        .contact-info, .contact-form {
+            flex: 1;
+        }
+        
+        .contact-info {
+            background-color: var(--beige);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .contact-details {
+            margin-top: 2rem;
+        }
+        
+        .contact-details p {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-details i {
+            margin-right: 10px;
+            color: var(--dark-green);
+            font-size: 1.2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--dark-green);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: var(--medium-green);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-green);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-links {
+            margin: 1.5rem 0;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--light-green);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content, .vision-mission, .contact-content {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .number h2 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .impact-numbers {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .number {
+                margin: 0.5rem 0;
+                width: 80%;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">BudayaBaik</div>
+                <ul class="nav-links">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#impact">Impact</a></li>
+                    <li><a href="#contact">Join Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Creating Positive Change in Indonesia</h1>
+                <p>We are dedicated to environmental conservation and empowering communities through sustainable initiatives</p>
+                
+                <div class="impact-numbers">
+                    <div class="number">
+                        <h2>2000+</h2>
+                        <p>Kilograms of plastic removed from landfills</p>
+                    </div>
+                    <div class="number">
+                        <h2>580+</h2>
+                        <p>Children impacted through our programs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Who Are We?</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>BudayaBaik is a non-profit organization based in Indonesia, focused on creating sustainable environmental and social change. Our name translates to "Good Culture," which reflects our mission to promote positive practices that benefit both people and the planet.</p>
+                    
+                    <div class="vision-mission">
+                        <div class="vision">
+                            <h3>Our Vision</h3>
+                            <p>A world where communities thrive in harmony with nature, preserving Indonesia's rich cultural and natural heritage for future generations.</p>
+                        </div>
+                        <div class="mission">
+                            <h3>Our Mission</h3>
+                            <p>To reduce environmental pollution, empower local communities through education and sustainable initiatives, and create lasting positive impact across Indonesia.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1527525443983-6e60c75fff46?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Community volunteering">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Team</h2>
+            </div>
+            
+            <div class="team-members">
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Founder 1">
+                    </div>
+                    <div class="member-info">
+                        <h3>Ahmad Wijaya</h3>
+                        <p class="member-role">Co-Founder & Director</p>
+                        <p>Environmental activist with 10+ years of experience in community development and sustainability projects.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Founder 2">
+                    </div>
+                    <div class="member-info">
+                        <h3>Dewi Suryani</h3>
+                        <p class="member-role">Co-Founder & Education Lead</p>
+                        <p>Former teacher passionate about creating educational opportunities for children in underserved communities.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Founder 3">
+                    </div>
+                    <div class="member-info">
+                        <h3>Budi Santoso</h3>
+                        <p class="member-role">Co-Founder & Operations Manager</p>
+                        <p>Expert in logistics and project management, ensuring our initiatives run smoothly and effectively.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Recent Projects</h2>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1587334274527-ba54f0b5a357?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Beach Cleanup">
+                    </div>
+                    <div class="project-info">
+                        <h3>Coastal Cleanup Initiative</h3>
+                        <p>Organized beach cleanups across Bali and Java, removing over 500kg of plastic waste from coastal areas.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Education Program">
+                    </div>
+                    <div class="project-info">
+                        <h3>Eco-Education Program</h3>
+                        <p>Environmental education workshops for children in rural communities, reaching 300+ students.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Recycling Center">
+                    </div>
+                    <div class="project-info">
+                        <h3>Community Recycling Center</h3>
+                        <p>Established a recycling facility in Yogyakarta that processes 200kg of waste weekly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="impact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Impact</h2>
+            </div>
+            
+            <div class="impact-content">
+                <p>Since our founding in 2018, BudayaBaik has made significant progress in addressing environmental issues and supporting communities across Indonesia. Our work has reached 12 cities and villages, creating lasting change through sustainable initiatives.</p>
+                
+                <div class="impact-map">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Indonesia_map.svg/800px-Indonesia_map.svg.png" alt="Indonesia Map" class="map-image">
+                    
+                    <!-- Map markers with approximate positions for Indonesian cities -->
+                    <div class="map-marker" style="top: 25%; left: 30%;"></div>
+                    <div class="map-marker" style="top: 40%; left: 45%;"></div>
+                    <div class="map-marker" style="top: 55%; left: 40%;"></div>
+                    <div class="map-marker" style="top: 70%; left: 50%;"></div>
+                    <div class="map-marker" style="top: 35%; left: 60%;"></div>
+                    <div class="map-marker" style="top: 50%; left: 70%;"></div>
+                </div>
+                
+                <div class="impact-stats">
+                    <div class="vision-mission">
+                        <div class="vision">
+                            <h3>Environmental Impact</h3>
+                            <p>2000+ kg plastic removed</p>
+                            <p>15 cleanup events organized</p>
+                            <p>3 recycling centers established</p>
+                        </div>
+                        <div class="mission">
+                            <h3>Community Impact</h3>
+                            <p>580+ children impacted</p>
+                            <p>12 communities reached</p>
+                            <p>50+ local volunteers trained</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Make a Change / Join Us</h2>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>We're always looking for volunteers, partners, and supporters to join our mission. Reach out to us to learn how you can contribute to creating positive change in Indonesia.</p>
+                    
+                    <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> info@budayabaik.org</p>
+                        <p><i class="fas fa-phone"></i> +62 21 1234 5678</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">BudayaBaik</div>
+                <p>Creating sustainable change in Indonesia</p>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                
+                <p>&copy; 2023 BudayaBaik. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for number counting
+        document.addEventListener('DOMContentLoaded', function() {
+            const numbers = document.querySelectorAll('.number h2');
+            
+            numbers.forEach(number => {
+                const target = parseInt(number.innerText);
+                let count = 0;
+                const duration = 2000; // ms
+                const frameRate = 30; // fps
+                const totalFrames = duration / (1000 / frameRate);
+                const increment = target / totalFrames;
+                
+                const timer = setInterval(() => {
+                    count += increment;
+                    if (count >= target) {
+                        number.innerText = target + '+';
+                        clearInterval(timer);
+                    } else {
+                        number.innerText = Math.floor(count) + '+';
+                    }
+                }, 1000 / frameRate);
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
