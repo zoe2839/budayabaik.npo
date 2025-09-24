@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BudayaBaik - Creating Positive Change in Indonesia</title>
+    <title>BudayaBaik - Empowering the kind culture in Indonesia's Youth </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
@@ -663,17 +663,17 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Creating Positive Change in Indonesia</h1>
-                <p>We are dedicated to environmental conservation and empowering communities through sustainable initiatives</p>
+                <h1>Empowering the Kind Culture in Indonesia's Youth</h1>
+                <p>Pushing barriers of sustainability and quality education in Indonesia's underpriviledged opportunities through youth-led community initiatives.</p>
                 
                 <div class="impact-numbers">
                     <div class="number">
                         <h2>2000+</h2>
-                        <p>Kilograms of plastic removed from landfills</p>
+                        <p>Kilograms of plastic removed from Indonesian landfills</p>
                     </div>
                     <div class="number">
                         <h2>580+</h2>
-                        <p>Children impacted through our programs</p>
+                        <p>Underpriviledged Children impacted through our programs</p>
                     </div>
                 </div>
             </div>
@@ -689,16 +689,13 @@
             
             <div class="about-content">
                 <div class="about-text">
-                    <p>BudayaBaik is a non-profit organization based in Indonesia, focused on creating sustainable environmental and social change. Our name translates to "Good Culture," which reflects our mission to promote positive practices that benefit both people and the planet.</p>
+                    <p>BudayaBaik is a non-profit organization based in Indonesia, est. in 2020, founded by NHJS students. We are a non-profit born from the belief that every child deserves a safe & sustainable place to learn. With a current mission to transform plastic waste into durable, eco-friendly classrooms, turning environmental challenges into educational opportunities. And pushing barriers of sustainability and quality education in Indonesia’s underprivileged communities. Our name translates to "Kind Culture," which reflects our mission to promote positive practices that benefit both people and the planet.</p>
+                
                     
                     <div class="vision-mission">
                         <div class="vision">
-                            <h3>Our Vision</h3>
+                            <h3>Our 2025 Annual Goals</h3>
                             <p>A world where communities thrive in harmony with nature, preserving Indonesia's rich cultural and natural heritage for future generations.</p>
-                        </div>
-                        <div class="mission">
-                            <h3>Our Mission</h3>
-                            <p>To reduce environmental pollution, empower local communities through education and sustainable initiatives, and create lasting positive impact across Indonesia.</p>
                         </div>
                     </div>
                 </div>
@@ -722,15 +719,15 @@
                     <div class="sdg-logo sdg-1">
                         <i class="fas fa-recycle"></i>
                     </div>
-                    <h3>Promote Sustainability</h3>
-                    <p>Transforming plastic waste into sustainable infrastructure: with each school we remove 15 tonnes of plastic from Indonesia's landfills.</p>
+                    <h3>Promote Sustainability - SDG 12 </h3>
+                    <p>Transforming plastic waste into sustainable infrastructure: with each school we remove 2 tonnes of plastic from Indonesia's landfills.</p>
                 </div>
                 
                 <div class="objective-card">
                     <div class="sdg-logo sdg-4">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3>Promote Quality Education</h3>
+                    <h3>Promote Quality Education - SDG 4 </h3>
                     <p>Providing safe and resilient learning environments for underprivileged communities in Indonesia.</p>
                 </div>
                 
@@ -738,7 +735,7 @@
                     <div class="sdg-logo sdg-10">
                         <i class="fas fa-hand-holding-heart"></i>
                     </div>
-                    <h3>Reduce Inequalities</h3>
+                    <h3>Reduce Inequalities - SDG 10 </h3>
                     <p>Bridging educational imbalance and promoting inclusivity to reduce wealth disparities in Indonesia.</p>
                 </div>
             </div>
@@ -791,8 +788,8 @@
                         <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Founder 1">
                     </div>
                     <div class="member-info">
-                        <h3>Ahmad Wijaya</h3>
-                        <p class="member-role">Co-Founder & Director</p>
+                        <h3>Elaine Humato</h3>
+                        <p class="member-role">Co-Founder & Executive Board</p>
                         <p>Environmental activist with 10+ years of experience in community development and sustainability projects.</p>
                     </div>
                 </div>
@@ -802,9 +799,9 @@
                         <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Founder 2">
                     </div>
                     <div class="member-info">
-                        <h3>Dewi Suryani</h3>
-                        <p class="member-role">Co-Founder & Education Lead</p>
-                        <p>Former teacher passionate about creating educational opportunities for children in underserved communities.</p>
+                        <h3>Zoe Hidayat</h3>
+                        <p class="member-role">Co-Founder & Executive Board </p>
+                        <p>An NHJS Junior passionate about creating educational opportunities and creating sustainable environments for children in underserved communities.</p>
                     </div>
                 </div>
                 
@@ -813,8 +810,8 @@
                         <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Founder 3">
                     </div>
                     <div class="member-info">
-                        <h3>Budi Santoso</h3>
-                        <p class="member-role">Co-Founder & Operations Manager</p>
+                        <h3>Jasmine Haditono</h3>
+                        <p class="member-role">Co-Founder & Executive Board</p>
                         <p>Expert in logistics and project management, ensuring our initiatives run smoothly and effectively.</p>
                     </div>
                 </div>
