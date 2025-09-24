@@ -207,6 +207,135 @@
             border-radius: 10px;
         }
         
+        /* Purpose and Objectives Section */
+        .purpose-objectives {
+            background-color: var(--beige);
+        }
+        
+        .objectives-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .objective-card {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .objective-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .sdg-logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+        }
+        
+        .sdg-1 { background-color: #e5243b; } /* SDG 1 - No Poverty */
+        .sdg-4 { background-color: #c5192d; } /* SDG 4 - Quality Education */
+        .sdg-10 { background-color: #dd1367; } /* SDG 10 - Reduced Inequalities */
+        
+        .objective-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark-green);
+        }
+        
+        /* Why Rebuild Eco-Schools Section */
+        .why-eco-schools {
+            background-color: var(--light-green);
+        }
+        
+        .why-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .why-text {
+            flex: 1;
+        }
+        
+        .why-stats {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .stat-item {
+            background-color: var(--white);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--dark-green);
+            margin-bottom: 10px;
+        }
+        
+        /* Pictures of Our Work Section */
+        .our-work {
+            background-color: var(--white);
+        }
+        
+        .work-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .work-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .work-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .work-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .work-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .work-item:hover .work-caption {
+            transform: translateY(0);
+        }
+        
         /* Team Section */
         .team {
             background-color: var(--beige);
@@ -468,7 +597,7 @@
         
         /* Responsive Design */
         @media (max-width: 992px) {
-            .about-content, .vision-mission, .contact-content {
+            .about-content, .vision-mission, .contact-content, .why-content {
                 flex-direction: column;
             }
             
@@ -478,6 +607,10 @@
             
             .number h2 {
                 font-size: 2.5rem;
+            }
+            
+            .objective-card {
+                min-width: 100%;
             }
         }
         
@@ -514,9 +647,12 @@
                 <div class="logo">BudayaBaik</div>
                 <ul class="nav-links">
                     <li><a href="#about">About Us</a></li>
+                    <li><a href="#purpose">Purpose</a></li>
+                    <li><a href="#why-eco">Why Eco-Schools</a></li>
                     <li><a href="#team">Our Team</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#impact">Impact</a></li>
+                    <li><a href="#work">Our Work</a></li>
                     <li><a href="#contact">Join Us</a></li>
                 </ul>
             </nav>
@@ -527,17 +663,17 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Empowering the kind culture in Indonesia's youth</h1>
-                <p>Pushing barriers of sustainability and quality education in Indonesia's underpriviledged opportunities through youth-led community initiatives.</p>
+                <h1>Creating Positive Change in Indonesia</h1>
+                <p>We are dedicated to environmental conservation and empowering communities through sustainable initiatives</p>
                 
                 <div class="impact-numbers">
                     <div class="number">
                         <h2>2000+</h2>
-                        <p>Kilograms of plastic removed from Indonesian landfills</p>
+                        <p>Kilograms of plastic removed from landfills</p>
                     </div>
                     <div class="number">
                         <h2>580+</h2>
-                        <p>Underpriviledged children impacted through our programs</p>
+                        <p>Children impacted through our programs</p>
                     </div>
                 </div>
             </div>
@@ -553,20 +689,90 @@
             
             <div class="about-content">
                 <div class="about-text">
-                    <p>BudayaBaik is a non-profit organization based in Indonesia, est. in 2020, founded by NHJS students. We are a non-profit born from the belief that every child deserves a safe & sustainable place to learn. With a current mission to transform plastic waste into durable, eco-friendly classrooms, turning environmental challenges into educational opportunities. And pushing barriers of sustainability and quality education in Indonesia’s underprivileged communities. Our name translates to "Kind Culture," which reflects our mission to promote positive practices that benefit both people and the planet.</p>
+                    <p>BudayaBaik is a non-profit organization based in Indonesia, focused on creating sustainable environmental and social change. Our name translates to "Good Culture," which reflects our mission to promote positive practices that benefit both people and the planet.</p>
                     
                     <div class="vision-mission">
-                
+                        <div class="vision">
+                            <h3>Our Vision</h3>
+                            <p>A world where communities thrive in harmony with nature, preserving Indonesia's rich cultural and natural heritage for future generations.</p>
                         </div>
                         <div class="mission">
-                            <h3>Our 2025 Annual Goal</h3>
-                            </p> By 2025, Budayabaik aims to grow into a non-profit of 50+ youth changemaker and dedicate ouselves to remove 2 tonnes of plastic waste from Indonesia's overfillling landfills and transform it into eco-blocks to finish the rebuilding of sekolah PAUD in Bogor, Indonesia. We aim to empower 580+ local underpriviledged community members through waste management and environmental & green education initiatives at . And promote quality education through providing semester scholarships for 40+ underpriviledged children of Indonesia. </p>
+                            <h3>Our Mission</h3>
+                            <p>To reduce environmental pollution, empower local communities through education and sustainable initiatives, and create lasting positive impact across Indonesia.</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="about-image">
                     <img src="https://images.unsplash.com/photo-1527525443983-6e60c75fff46?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Community volunteering">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Purpose and Objectives Section -->
+    <section id="purpose" class="purpose-objectives">
+        <div class="container">
+            <div class="section-title">
+                <h2>Purpose and Objectives</h2>
+            </div>
+            
+            <div class="objectives-container">
+                <div class="objective-card">
+                    <div class="sdg-logo sdg-1">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3>Promote Sustainability</h3>
+                    <p>Transforming plastic waste into sustainable infrastructure: with each school we remove 15 tonnes of plastic from Indonesia's landfills.</p>
+                </div>
+                
+                <div class="objective-card">
+                    <div class="sdg-logo sdg-4">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Promote Quality Education</h3>
+                    <p>Providing safe and resilient learning environments for underprivileged communities in Indonesia.</p>
+                </div>
+                
+                <div class="objective-card">
+                    <div class="sdg-logo sdg-10">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Reduce Inequalities</h3>
+                    <p>Bridging educational imbalance and promoting inclusivity to reduce wealth disparities in Indonesia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Rebuild Eco-Schools Section -->
+    <section id="why-eco" class="why-eco-schools">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Rebuild Eco-Schools?</h2>
+            </div>
+            
+            <div class="why-content">
+                <div class="why-text">
+                    <p>BudayaBaik's eco-school initiative addresses critical challenges in Indonesia's education and environmental sectors. By rebuilding schools using recycled plastic materials, we tackle multiple issues simultaneously.</p>
+                    <p>Our eco-schools provide safe, resilient learning environments while removing significant amounts of plastic waste from landfills and oceans. Each school we build represents a step toward a more sustainable and equitable future for Indonesia.</p>
+                </div>
+                
+                <div class="why-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">4.3 Million</div>
+                        <p>children in Indonesia aged 7-18 are out of school.</p>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-number">40%</div>
+                        <p>of Indonesia's schools lack minimum infrastructure (such as toilet facilities and adequate lighting).</p>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-number">3.2 million tonnes</div>
+                        <p>of unmanaged plastic waste in Indonesia annually, with 90% ending in landfills/oceans.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -582,33 +788,33 @@
             <div class="team-members">
                 <div class="team-member">
                     <div class="member-img">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Founder">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Founder 1">
                     </div>
                     <div class="member-info">
-                        <h3>Elaine Humato</h3>
-                        <p class="member-role">Co-Founder</p>
+                        <h3>Ahmad Wijaya</h3>
+                        <p class="member-role">Co-Founder & Director</p>
                         <p>Environmental activist with 10+ years of experience in community development and sustainability projects.</p>
                     </div>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-img">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Founder">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Founder 2">
                     </div>
                     <div class="member-info">
-                        <h3>Zoe Hidayat</h3>
-                        <p class="member-role">Co-Founder</p>
-                        <p>Hi! I'm Zoe, a founder of BudayaBaik and I'm NHJS Junior advocating for sustainable communities and dedicated to creating educational opportunities for children in underserved communities.</p>
+                        <h3>Dewi Suryani</h3>
+                        <p class="member-role">Co-Founder & Education Lead</p>
+                        <p>Former teacher passionate about creating educational opportunities for children in underserved communities.</p>
                     </div>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-img">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Founder">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Founder 3">
                     </div>
                     <div class="member-info">
-                        <h3>Jasmine Haditono</h3>
-                        <p class="member-role">Co-Founder</p>
+                        <h3>Budi Santoso</h3>
+                        <p class="member-role">Co-Founder & Operations Manager</p>
                         <p>Expert in logistics and project management, ensuring our initiatives run smoothly and effectively.</p>
                     </div>
                 </div>
@@ -629,7 +835,7 @@
                         <img src="https://images.unsplash.com/photo-1587334274527-ba54f0b5a357?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Beach Cleanup">
                     </div>
                     <div class="project-info">
-                        <h3>Yayasan Sayap Ibu Hydrophonics Initiative</h3>
+                        <h3>Coastal Cleanup Initiative</h3>
                         <p>Organized beach cleanups across Bali and Java, removing over 500kg of plastic waste from coastal areas.</p>
                     </div>
                 </div>
@@ -639,7 +845,7 @@
                         <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Education Program">
                     </div>
                     <div class="project-info">
-                        <h3>Sekolah PAUD's Sustainable Transformation and Scholarship Program</h3>
+                        <h3>Eco-Education Program</h3>
                         <p>Environmental education workshops for children in rural communities, reaching 300+ students.</p>
                     </div>
                 </div>
@@ -649,7 +855,7 @@
                         <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Recycling Center">
                     </div>
                     <div class="project-info">
-                        <h3>Educational Material Donatsions</h3>
+                        <h3>Community Recycling Center</h3>
                         <p>Established a recycling facility in Yogyakarta that processes 200kg of waste weekly.</p>
                     </div>
                 </div>
@@ -665,7 +871,7 @@
             </div>
             
             <div class="impact-content">
-                <p>Since our founding in 2020, BudayaBaik has made significant progress in addressing environmental issues and supporting communities across Indonesia. Our work has reached 3 rural areas and villages, creating lasting change through sustainable initiatives.</p>
+                <p>Since our founding in 2018, BudayaBaik has made significant progress in addressing environmental issues and supporting communities across Indonesia. Our work has reached 12 cities and villages, creating lasting change through sustainable initiatives.</p>
                 
                 <div class="impact-map">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Indonesia_map.svg/800px-Indonesia_map.svg.png" alt="Indonesia Map" class="map-image">
@@ -684,7 +890,7 @@
                         <div class="vision">
                             <h3>Environmental Impact</h3>
                             <p>2000+ kg plastic removed</p>
-                            <p>8 environmental related events organized</p>
+                            <p>15 cleanup events organized</p>
                             <p>3 recycling centers established</p>
                         </div>
                         <div class="mission">
@@ -693,6 +899,65 @@
                             <p>12 communities reached</p>
                             <p>50+ local volunteers trained</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pictures of Our Work Section -->
+    <section id="work" class="our-work">
+        <div class="container">
+            <div class="section-title">
+                <h2>Pictures of Our Work</h2>
+            </div>
+            
+            <div class="work-gallery">
+                <div class="work-item">
+                    <img src="https://images.unsplash.com/photo-1571624436279-b272aff752b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Eco-School Construction">
+                    <div class="work-caption">
+                        <h3>Eco-School Construction</h3>
+                        <p>Building schools using recycled plastic materials</p>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Plastic Collection">
+                    <div class="work-caption">
+                        <h3>Plastic Collection</h3>
+                        <p>Community members collecting plastic waste for recycling</p>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Students in Classroom">
+                    <div class="work-caption">
+                        <h3>Students in Classroom</h3>
+                        <p>Children learning in our newly built eco-schools</p>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Community Workshop">
+                    <div class="work-caption">
+                        <h3>Community Workshop</h3>
+                        <p>Teaching sustainable practices to local communities</p>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Recycling Process">
+                    <div class="work-caption">
+                        <h3>Recycling Process</h3>
+                        <p>Transforming plastic waste into building materials</p>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Completed Eco-School">
+                    <div class="work-caption">
+                        <h3>Completed Eco-School</h3>
+                        <p>A finished school building made from recycled materials</p>
                     </div>
                 </div>
             </div>
