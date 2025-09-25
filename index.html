@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BudayaBaik - Empowering the kind culture in Indonesia's Youth </title>
+    <title>BudayaBaik - Empowering the kind culture in Indonesia's Youth</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
@@ -54,7 +54,25 @@
             z-index: 1000;
         }
         
-        .logo {
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--dark-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .logo-text {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
             color: var(--dark-green);
@@ -173,7 +191,7 @@
         
         .about-content {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 40px;
         }
         
@@ -186,11 +204,13 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-height: 400px; /* Shorter image */
         }
         
         .about-image img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
             display: block;
         }
         
@@ -508,6 +528,20 @@
             background-color: var(--beige);
             padding: 30px;
             border-radius: 10px;
+            position: relative;
+        }
+        
+        .contact-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--dark-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            margin: 0 auto 20px;
         }
         
         .contact-details {
@@ -612,6 +646,10 @@
             .objective-card {
                 min-width: 100%;
             }
+            
+            .about-image {
+                max-height: 300px;
+            }
         }
         
         @media (max-width: 768px) {
@@ -636,6 +674,10 @@
             .section-title h2 {
                 font-size: 2rem;
             }
+            
+            .about-image {
+                max-height: 250px;
+            }
         }
     </style>
 </head>
@@ -644,7 +686,12 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">BudayaBaik</div>
+                <div class="logo-container">
+                    <div class="logo-img">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="logo-text">BudayaBaik</div>
+                </div>
                 <ul class="nav-links">
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#purpose">Purpose</a></li>
@@ -664,7 +711,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Empowering the Kind Culture in Indonesia's Youth</h1>
-                <p>Pushing barriers of sustainability and quality education in Indonesia's underpriviledged opportunities through youth-led community initiatives.</p>
+                <p>Pushing barriers of sustainability and quality education in Indonesia's underprivileged opportunities through youth-led community initiatives.</p>
                 
                 <div class="impact-numbers">
                     <div class="number">
@@ -673,7 +720,7 @@
                     </div>
                     <div class="number">
                         <h2>580+</h2>
-                        <p>Underpriviledged Children impacted through our programs</p>
+                        <p>Underprivileged Children impacted through our programs</p>
                     </div>
                 </div>
             </div>
@@ -690,13 +737,13 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>BudayaBaik is a non-profit organization based in Indonesia, est. in 2020, founded by NHJS students. We are a non-profit born from the belief that every child deserves a safe & sustainable place to learn. 
-                        With a current mission to transform plastic waste into durable, eco-friendly classrooms, turning environmental challenges into educational opportunities. And pushing barriers of sustainability and quality education in Indonesia’s underprivileged communities. Our name translates to "Kind Culture," which reflects our mission to promote positive practices that benefit both people and the planet.</p>
+                        With a current mission to transform plastic waste into durable, eco-friendly classrooms, turning environmental challenges into educational opportunities. And pushing barriers of sustainability and quality education in Indonesia's underprivileged communities. Our name translates to "Kind Culture," which reflects our mission to promote positive practices that benefit both people and the planet.</p>
                 
                     
                     <div class="vision-mission">
                         <div class="vision">
                             <h3>Our 2025 Annual Goals</h3>
-                            <p>By 2025, Budayabaik aims to grow into a non-profit of 50+ youth changemaker and dedicate ouselves to remove 2 tonnes of plastic waste from Indonesia's overfillling landfills and transform it into eco-blocks to finish the rebuilding of sekolah PAUD in Bogor, Indonesia. We aim to empower 580+ local underpriviledged community members through waste management and environmental & green education initiatives at . And promote quality education through providing semester scholarships for 40+ underpriviledged children of Indonesia. </p>
+                            <p>By 2025, Budayabaik aims to grow into a non-profit of 50+ youth changemaker and dedicate ourselves to remove 2 tonnes of plastic waste from Indonesia's overflowing landfills and transform it into eco-blocks to finish the rebuilding of sekolah PAUD in Bogor, Indonesia. We aim to empower 580+ local underprivileged community members through waste management and environmental & green education initiatives. And promote quality education through providing semester scholarships for 40+ underprivileged children of Indonesia.</p>
                         </div>
                     </div>
                 </div>
@@ -720,7 +767,7 @@
                     <div class="sdg-logo sdg-1">
                         <i class="fas fa-recycle"></i>
                     </div>
-                    <h3>Promote Sustainability - SDG 12 </h3>
+                    <h3>Promote Sustainability - SDG 12</h3>
                     <p>Transforming plastic waste into sustainable infrastructure: with each school we remove 2 tonnes of plastic from Indonesia's landfills.</p>
                 </div>
                 
@@ -728,7 +775,7 @@
                     <div class="sdg-logo sdg-4">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3>Promote Quality Education - SDG 4 </h3>
+                    <h3>Promote Quality Education - SDG 4</h3>
                     <p>Providing safe and resilient learning environments for underprivileged communities in Indonesia.</p>
                 </div>
                 
@@ -736,7 +783,7 @@
                     <div class="sdg-logo sdg-10">
                         <i class="fas fa-hand-holding-heart"></i>
                     </div>
-                    <h3>Reduce Inequalities - SDG 10 </h3>
+                    <h3>Reduce Inequalities - SDG 10</h3>
                     <p>Bridging educational imbalance and promoting inclusivity to reduce wealth disparities in Indonesia.</p>
                 </div>
             </div>
@@ -753,8 +800,7 @@
             <div class="why-content">
                 <div class="why-text">
                     <p>BudayaBaik's eco-school initiative addresses critical challenges in Indonesia's education and environmental sectors. By rebuilding schools using recycled plastic materials, we tackle multiple issues simultaneously.</p>
-                    <p>
-                        Our eco-schools provide safe, resilient learning environments while removing significant amounts of plastic waste from landfills and oceans. Each school we build represents a step toward a more sustainable and equitable future for Indonesia.</p>
+                    <p>Our eco-schools provide safe, resilient learning environments while removing significant amounts of plastic waste from landfills and oceans. Each school we build represents a step toward a more sustainable and equitable future for Indonesia.</p>
                 </div>
                 
                 <div class="why-stats">
@@ -802,7 +848,7 @@
                     </div>
                     <div class="member-info">
                         <h3>Zoe Hidayat</h3>
-                        <p class="member-role">Co-Founder & Executive Board </p>
+                        <p class="member-role">Co-Founder & Executive Board</p>
                         <p>An NHJS Junior passionate about creating educational opportunities and creating sustainable environments for children in underserved communities.</p>
                     </div>
                 </div>
@@ -835,7 +881,7 @@
                     </div>
                     <div class="project-info">
                         <h3>Yayasan Sayap Ibu Hydrophonics Initiative</h3>
-                        <p>Hosted a hydrophonics building event at Yayasan Sayap Ibu. Teaching and bringing joy to 30+ underpriviledged children and disabled orphans regarding photosynthesis and plant related topics. Building a hydrophonics system for the orphanage centre and raising IDR 500,000 to donate 100+ tomato and lettuce seeds.</p>
+                        <p>Hosted a hydrophonics building event at Yayasan Sayap Ibu. Teaching and bringing joy to 30+ underprivileged children and disabled orphans regarding photosynthesis and plant related topics. Building a hydrophonics system for the orphanage centre and raising IDR 500,000 to donate 100+ tomato and lettuce seeds.</p>
                     </div>
                 </div>
                 
@@ -845,7 +891,7 @@
                     </div>
                     <div class="project-info">
                         <h3>Sekolah PAUD's Sustainable Transformation and Scholarship Program</h3>
-                        <p>Fundraised $30,000 USD to rebuild sekolah PAUD in Bogor, Indonesia. From learning in cramped, hot spaces in the principals personal home to a safe, and green furnished eco-block school. Provided educational toys, chairs and benches hosting eco-block volunteer programs and mural painting initiatives. Impacting 300+ community members and providing semester scholarships for 50+ underpriviledged students. </p>
+                        <p>Fundraised $30,000 USD to rebuild sekolah PAUD in Bogor, Indonesia. From learning in cramped, hot spaces in the principals personal home to a safe, and green furnished eco-block school. Provided educational toys, chairs and benches hosting eco-block volunteer programs and mural painting initiatives. Impacting 300+ community members and providing semester scholarships for 50+ underprivileged students.</p>
                     </div>
                 </div>
                 
@@ -855,7 +901,7 @@
                     </div>
                     <div class="project-info">
                         <h3>Educational Material Donations</h3>
-                        <p>Donated IDR 1,500,000 in collaboration with Golden Rama Travels and Tours to provide recycling and hygiene infrastructure, educational materials (posters and books), stationary and educational toys. Hosted art painting events regarding "A sustainable environment and living eco-systems around us" and taught 40+ students environment related STEM lessons. </p>
+                        <p>Donated IDR 1,500,000 in collaboration with Golden Rama Travels and Tours to provide recycling and hygiene infrastructure, educational materials (posters and books), stationary and educational toys. Hosted art painting events regarding "A sustainable environment and living eco-systems around us" and taught 40+ students environment related STEM lessons.</p>
                     </div>
                 </div>
             </div>
@@ -873,7 +919,7 @@
                 <p>Since our founding in 2020, BudayaBaik has made significant progress in addressing environmental issues and supporting communities across Indonesia. Our work has reached 3 cities and villages, creating lasting change through sustainable initiatives.</p>
                 
                 <div class="impact-map">
-                    <img src="file:///Users/zoehidayat/Downloads/indonesia.svg" alt="Indonesia Map" class="map-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Indonesia_map.svg/800px-Indonesia_map.svg.png" alt="Indonesia Map" class="map-image">
                     
                     <!-- Map markers with approximate positions for Indonesian cities -->
                     <div class="map-marker" style="top: 25%; left: 30%;"></div>
@@ -972,6 +1018,9 @@
             
             <div class="contact-content">
                 <div class="contact-info">
+                    <div class="contact-logo">
+                        <i class="fas fa-seedling"></i>
+                    </div>
                     <h3>Get In Touch</h3>
                     <p>We're always looking for volunteers, partners, and supporters to join our mission. Reach out to us to learn how you can contribute to creating positive change in Indonesia.</p>
                     
@@ -1010,7 +1059,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="logo">BudayaBaik</div>
+                <div class="logo-text">BudayaBaik</div>
                 <p>Creating sustainable change in Indonesia</p>
                 
                 <div class="social-links">
